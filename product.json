@@ -1,0 +1,199 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title":"box1",
+      "sunduk_img": "./image/snduk1.png",
+      "price": "10",
+      "price_btc": "0.0001BTC"
+    },
+    {
+      "id": 2,
+      "title":"box2",
+      "sunduk_img": "./image/snduk2.png",
+      "price": "25",
+      "price_btc": "0.0025BTC"
+    },
+    {
+      "id": 3,
+      "title":"box3",
+      "sunduk_img": "./image/snduk3.png",
+      "price": "50",
+      "price_btc": "0.005BTC"
+    },
+    {
+      "id": 4,
+      "title":"box4",
+      "sunduk_img": "./image/snduk4.png",
+      "price": "100",
+      "price_btc": "0.0001BTC"
+    },
+    {
+      "id": 5,
+      "title":"box5",
+      "sunduk_img": "./image/snduk5.png",
+      "price": "250",
+      "price_btc": "0.0001BTC"
+    },
+    {
+      "id": 6,
+      "title":"box6",
+      "sunduk_img": "./image/snduk2.png",
+      "price": "300",
+      "price_btc": "0.025BTC"
+    },
+    {
+      "id": 7,
+      "title":"box7",
+      "sunduk_img": "./image/snduk3.png",
+      "price": "350",
+      "price_btc": "0.05BTC"
+    }
+  ],
+  "productTotal":[
+    {
+      "logo":"./image/Token logo.png",
+      "id":"#224356",
+      "name":"LINK Total",
+      "n1":"70",
+      "n2":"100",
+      "date":"2Y 355D",
+      "bg_img":"./image/Rectangle432.png",
+      "bg1_img":"./image/Rectangle 326.png",
+      "sunduk_img":"./image/Frame 7253.png",
+      "image":"./image/Group 6674.png",
+      "tokos":"50",
+      "tokosA":"5",
+      "tokosB":"30",
+      "start":"7",
+      "targetA":"10",
+      "targetB":"70"
+    },
+    {
+      "logo":"./image/Token logo.png",
+      "id":"#784599",
+      "name":"AVAX Total",
+      "n1":"10",
+      "n2":"100",
+      "date":"3Y 105D",
+      "bg_img":"./image/Rectangle 433.png",
+      "bg1_img":"./image/Rectangle 327.png",
+      "sunduk_img":"./image/Frame 7256.png",
+      "image":"./image/Group 6674 (1).png",
+      "tokos":"20",
+      "tokosA":"5",
+      "tokosB":"30",
+      "start":"15",
+      "targetA":"100",
+      "targetB":"1500"
+    },
+    {
+      "logo":"./image/Token logo.png",
+      "id":"#732559",
+      "name":"GMT Total",
+      "n1":"2000",
+      "n2":"1000",
+      "date":"1Y 19D",
+      "bg_img":"./image/Rectangle 434.png",
+      "bg1_img":"./image/Rectangle 328.png",
+      "sunduk_img":"./image/Frame 7255.png",
+      "image":"./image/Group 6674 (2).png",
+      "tokos":"40",
+      "tokosA":"10",
+      "tokosB":"5",
+      "start":"0.5",
+      "targetA":"100",
+      "targetB":"50"
+    },
+    {
+      "logo":"./image/Token logo.png",
+      "id":"#256348",
+      "name":"MATIC TOTAL",
+      "n1":"2000",
+      "n2":"1000",
+      "date":"1Y 9D",
+      "bg_img":"./image/Rectangle 320.png",
+      "bg1_img":"./image/Rectangle 329.png",
+      "sunduk_img":"./image/Frame 7254.png",
+      "image":"./image/Group 6674 (3).png",
+      "tokos":"75",
+      "tokosA":"15",
+      "tokosB":"7.5",
+      "start":"0.5",
+      "targetA":"20",
+      "targetB":"10"
+    }
+  ],
+  "scrolls":[
+    {
+      "id":1,
+      "X":100,
+      "color":"#68BCF8",
+      "kod":"CSPR",
+      "prace":"Free",
+      "img":"./image/1 scroll.png",
+      "bg":"./image/Rectangle 421.png",
+      "bgr":"./image/Rectangle432.png"
+    },
+    {
+      "id":2,
+      "X":10,
+      "color":"#68BCF8",
+      "kod":"GMT",
+      "prace":"Free",
+      "img":"./image/Group 7285.png",
+      "bg":"./image/Rectangle 422.png",
+      "bgr":"./image/Rectangle 433.png"
+    },
+    {
+      "id":3,
+      "X":100,
+      "color":"white",
+      "kod":"LINK",
+      "prace":"$3",
+      "img":"./image/Group 7286.png",
+      "bg":"./image/Rectangle 423.png",
+      "bgr":"./image/Rectangle 434.png"
+    },
+    {
+      "id":4,
+      "X":100,
+      "color":"#68BCF8",
+      "kod":"MATIK",
+      "prace":"$4",
+      "img":"./image/Group 7287.png",
+      "bg":"./image/Rectangle 424.png",
+      "bgr":"./image/Rectangle 435.png"
+    },
+    {
+      "id":5,
+      "X":100,
+      "color":"white",
+      "kod":"AVAX",
+      "prace":"$5",
+      "img":"./image/Group 7285.png",
+      "bg":"./image/Rectangle 425.png",
+      "bgr":"./image/Rectangle 436.png"
+    },
+    {
+      "id":6,
+      "X":150,
+      "color":"#68BCF8",
+      "kod":"CSPR",
+      "prace":"$6",
+      "img":"./image/Group 7287.png",
+      "bg":"./image/Rectangle 421.png",
+      "bgr":"./image/Rectangle432.png"
+    },
+    {
+      "id":7,
+      "X":200,
+      "color":"#68BCF8",
+      "kod":"GMT",
+      "prace":"$10",
+      "img":"./image/1 scroll.png",
+      "bg":"./image/Rectangle 422.png",
+      "bgr":"./image/Rectangle 433.png"
+    }
+  ]
+}
