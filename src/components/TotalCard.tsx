@@ -26,7 +26,7 @@ export function TotalCard() {
     let classTotal = ' absolute w-[100px]  top-[347px] left-[280px] text-white text-[20px] font-bold stroke block text-end';
 
     function Save(el: any) {
-        if (el.id === 0) {
+        if (+el.id === 0) {
             el.className = "fa-solid fa-star text-[#F6E835]";
             el.id = 1
         } else {
