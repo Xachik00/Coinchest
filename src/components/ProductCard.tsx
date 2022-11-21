@@ -22,7 +22,7 @@ export function ProductCard() {
     <div className='flex   w-[700px] justify-between scroll ml-4 stroke'>
       {
         products.map(product =>
-          <div className={classProduct} onClick={() => { select !== product.id ? setSelect(product.id) : setSelect(0) }}>
+          <div key={product.id} className={classProduct} onClick={() => { select !== product.id ? setSelect(product.id) : setSelect(0) }}>
             <div className='w-[130px] h-[168px]'><img src={product?.sunduk_img} alt="" /></div>
             <p className={classPrice}> {product?.price_btc} </p>
             <p className={classPrice1}> ${product?.price} </p>
