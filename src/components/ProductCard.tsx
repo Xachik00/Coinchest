@@ -19,7 +19,7 @@ export function ProductCard() {
   const [select, setSelect] = useState<number | undefined>(1)
 
   return (
-    <div className='flex   w-[700px] justify-between scroll ml-4 stroke'>
+    <div className='flex   lg:w-[700px] justify-between scroll ml-4 stroke md:w-[780px]'>
       {
         products.map(product =>
           <div key={product.id} className={classProduct} onClick={() => { select !== product.id ? setSelect(product.id) : setSelect(0) }}>

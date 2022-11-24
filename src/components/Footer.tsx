@@ -1,10 +1,10 @@
 export default function Footer() {
 
-    let classFooter = ' w-[1440px] h-[254px] bg-[#978BF5] mt-[50px] pt-[1px] ';
+    let classFooter = ' lg:w-[1440px] lg:h-[254px] bg-[#978BF5] mt-[50px] pt-[1px] md:w-[1023px] md:h-[228px] w-[320px]';
     let classIcons = 'flex mt-[14px] ml-5 justify-between w-[1100px]';
     let classRoadmap = '  w-[89px] h-[30px] text-white text-[20px]';
     let classCoinchest = ' mt-[15px] w-[149px] h-[30px] text-white text-[20px]';
-    let classPrivacy = 'w-[1440px] h-[40px] bg-[#7A6DE6] flex justify-between items-center text-white mt-[30px]';
+    let classPrivacy = 'w-[100%] h-[40px] bg-[#7A6DE6] flex justify-between items-center text-white lg:mt-[30px] md:mt-[10px]';
 
 
 
@@ -33,7 +33,7 @@ export default function Footer() {
                         <div className=' mt-5 ml-5'><a href='tel:+37477219733'>coinchestio@gmail.com</a></div>
                     </div>
                 </div>
-                <div>
+                <div className=" md:mr-[200px]">
                     <p className={classRoadmap}><a rel="noreferrer" href='https://monday.com/lp/swd/?utm_medium=cpc&utm_source=adwordssearch&utm_campaign=ww-en-prm-workos-dev-product_management-h-search-desktop-exp-aw&utm_keyword=roadmap&utm_match_type=e&cluster=tech&subcluster=swd_product_roadmap&ati=&gclid=Cj0KCQiAyMKbBhD1ARIsANs7rEGmw4ZaxUmUHKRaMb_PkyfBz9_n67MqyKMLDG0zQ0y3DALqTn6yTCoaAuhqEALw_wcB' target='_blank'>Roadmap</a></p>
                     <p className={classCoinchest}><a rel="noreferrer" href='https://fulltimehomebusiness.com/coinchest-app/' target='_blank'>Why coinchest?</a></p>
                 </div>
@@ -42,7 +42,7 @@ export default function Footer() {
 
             <div className={classPrivacy}>
                 <p className='ml-[20px]'>Copyright  ©  2022 Coinchest.io   All  rights  reserved</p>
-                <p className='mr-[20px]'>Privacy Policy <span className='mx-[4px] text-black'>|</span>  Terms & Conditions</p>
+                <p className='mr-[20px] stroke'>Privacy Policy <span className='mx-[4px] text-black'>|</span>  Terms & Conditions</p>
             </div>
         </footer >
     )

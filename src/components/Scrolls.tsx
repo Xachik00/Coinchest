@@ -12,14 +12,14 @@ export default function Scrolls() {
     }, []);
 
     return (
-        <div className=' mt-[52px]'>
+        <div className=' lg:mt-[52px] md:mt-[762px] mx-auto mt-[700px]'>
             <div className=' relative'>
                 <img src="./image/group_.png" alt="" />
                 <h2 className='text-[28px] text-white font-bold absolute left-[20px] top-[6px]'>Scrolls</h2>
             </div>
-            <p className=' w-[920px] ml-5 mt-8 text-[20px] tracking-[1px] '>At Coinchest we try to find the best projects in cryptocurrency sphere,
+            <p className=' lg:w-[920px] ml-5 mt-8 md:text-[20px] tracking-[1px] md:w-[992px] w-[288px] text-[14px]'>At Coinchest we try to find the best projects in cryptocurrency sphere,
                 which tokens can be hidden gems for an investors. Bellow few of them.</p>
-            <div className=' flex w-[920px] h-[200px] ml-[20px]  scroll1'>
+            <div className=' flex lg:w-[920px] h-[200px] ml-[20px]  scroll1 md:w-[992px] w-[288px]'>
                 {
                     scrolls.map(scroll =>
                         <div key={scroll.id} className=' relative border rounded-md  hover:transition-all cursor-pointer mr-[200px] text-[20px]  stroke'>

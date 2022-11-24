@@ -29,7 +29,7 @@ export function ProductSearch() {
   }, [debounced]);
 
 
-  let classInput = ' h-[49px] w-[222px] rounded-[8px] border-[1px] border-solid border-black text-black ml-[14px] text-[24px] p-2 pl-10';
+  let classInput = 'w-[264px] h-[36px] md:h-[49px] md:w-[222px] rounded-[8px] border-[1px] border-solid border-black text-black ml-[14px] text-[24px] p-2 pl-10';
 
 
   return (

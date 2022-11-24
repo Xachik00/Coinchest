@@ -1,18 +1,17 @@
-import { ProductSearch } from '../components/ProductSearch';
-import { ProductCard } from '../components/ProductCard';
+import { ProductSearch } from './ProductSearch';
+import { ProductCard } from './ProductCard';
 import { useState } from 'react'
 
-interface btn{
-    btnclick:boolean
-    setBtnclick:(el:boolean)=>void
+interface Btn{
+    Step2:()=> void;
 }
-export default function Step1({btnclick,setBtnclick}:btn) {
+export default function Stepmek({Step2}:Btn) {
 
     const [value,setValue]=useState('');
     const [value1,setValue1]=useState('');
     const price=(+value)*(+value1)    
     
-    let classStep1 = ' w-[920px] h-[774px] bg-[#7A6DE6] ml-[20px] rounded-r-[20px] rounded-bl-[20px] border-[1px] border-dashed border-black';
+    let classStep1 = ' lg:w-[920px] md:h-[774px] bg-[#7A6DE6] ml-[20px] md:rounded-r-[20px] rounded-br-[20px] rounded-bl-[20px] border-[1px] border-dashed border-black md:w-[992px] w-[288px] h-[825px]';
     let classContSelect = ' w-[729px] h-[49px] flex text-white mt-[40px] justify-between';
     let classSelect = ' w-[133px] h-[49px] bg-[#F4BF4E] ml-[14px] rounded-[8px] text-[24px] stroke p-2'
     let classTarget = ' w-[680px] h-[75px] flex text-white ml-[36px] mt-[40px] justify-between items-center';
@@ -22,9 +21,9 @@ export default function Step1({btnclick,setBtnclick}:btn) {
     
     return (
         <div className={classStep1}>
-            <h2 className='text-[36px] text-white stroke text-center mt-[30px]'>Step 1</h2>
-            <div className=' w-[600px] h-[66px] text-white flex ml-[20px] mt-[38px] text-center'>
-                <h2 className='text-[22px] mt-[5px]'>Choose a token</h2>
+            <h2 className='md:text-[36px] text-white stroke text-center mt-[30px] text-[20px]'>Step 1</h2>
+            <div className=' w-[600px] h-[66px] text-white md:flex md:ml-[20px] md:mt-[38px] md:text-center '>
+                <h2 className='md:text-[22px] mt-[5px] ml-4 text-[14px]'>Choose a token</h2>
                 <ProductSearch />
             </div>
             <div className='  h-[201px] text-white flex ml-[20px]  text-center mt-[49px] items-center'>
@@ -73,7 +72,7 @@ export default function Step1({btnclick,setBtnclick}:btn) {
                 </div>
                 <button className=' relative ml-[20px] mt-2'>
                     <img src="./image/step.png" alt="" />
-                    <p className=' absolute top-1 left-6 text-[23px] text-white stroke' onClick={()=>setBtnclick(!btnclick)}>Next {'>'}</p>
+                    <p className=' absolute top-1 left-6 text-[23px] text-white stroke' onClick={Step2}>Next {'>'}</p>
                 </button>
             </div>
         </div>

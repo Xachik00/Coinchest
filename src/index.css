@@ -37,6 +37,16 @@
     border-radius: 10px;
     background: white;
 }
+.scrol-y{
+    padding: 8px;
+}
+ .scrol-y::-webkit-scrollbar {
+    height: 10px;
+ }
+ .scrol-y::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: white;
+}
 .stepp{
     clip-path: polygon(0% 0%, 75% 0%, 90% 52%, 75% 100%, 0% 100%);
 }
@@ -52,4 +62,7 @@
 }
 .bg{
     background: linear-gradient(180deg, #7CB2EE 6.35%, #176DD0 80.21%);
+}
+.aaa{
+    color: greenyellow;
 }

@@ -13,9 +13,9 @@ export function TotalCard() {
         dispatch(fetchTotal());
     }, [dispatch]);
 
-    let classesChests = 'w-[220px] h-[64px] border border-solid border-black rounded-t-[10px] ';
-    let classInput = ' h-[40px] w-[400px] rounded-[8px] border-[1px] border-solid border-black text-black ml-[20px] mt-[30px] text-[18px] p-2 pl-10';
-    let classSelect = ' w-[178px] h-[42px] bg-[#BA99F5] text-[28px] text-white stroke ml-[20px] mt-8';
+    let classesChests = 'w-[144px] h-[36px] md:w-[220px] md:h-[64px] border border-solid border-black rounded-t-[10px] ';
+    let classInput = ' w-[261px] h-[40px] ml-[-130px] mt-[16px] md:w-[400px] rounded-[8px] border-[1px] border-solid border-black text-black md:ml-[20px] md:mt-[30px] text-[18px] p-2 pl-10';
+    let classSelect = ' w-[178px] h-[42px] bg-[#BA99F5] text-[28px] text-white stroke ml-[20px] mt-[16px]';
     let classElementName = ' absolute top-1 left-[76px] text-[24px] text-white stroke';
     let classP = ' absolute w-[192px] h-[30px] bg-white flex top-[30px] left-[41px] border border-solid border-black rounded-[4px] text-white text-[22px] stroke items-center';
     let classElementDate = ' ml-1 bg-[#6666CA] w-[150px] h-[22px] border border-solid rounded-[4px] mt-[-22px]';
@@ -41,29 +41,32 @@ export function TotalCard() {
                 <button className={classesChests + 'bg-[#F4BF4E]'} onClick={() => setChests(false)}>All chests</button>
                 <button className={classesChests + 'bg-[#CBCBCB]'} onClick={() => setChests(true)}>My chests</button>
             </div>
-            <div className=' w-[440px] h-[1900px] bg-[#BA99F5]'>
-                <div className='text-center w-[400px]'>
-                    <i className="fa-solid fa-magnifying-glass text-[#F6E835] relative  left-[-160px] text-[18px] top-[62px] stroke"></i>
-                    <input
-                        className={classInput}
-                        placeholder="Search" />
+            <div className=' lg:w-[440px] lg:h-[1900px] bg-[#BA99F5] md:w-[992px] md:h-[555px] w-[288px] h-[605px]'>
+                <div className='lg:block md:flex'>
+                    <div className='text-center w-[400px]'>
+                        <i className="fa-solid fa-magnifying-glass text-[#F6E835] relative  md:left-[-160px] text-[18px] md:top-[62px] stroke left-[-100px]"></i>
+                        <input
+                            className={classInput}
+                            placeholder="Search" />
+                    </div>
+                    <div className='flex'>
+                        <h1 className={classSelect}>All chests</h1>
+                        <img src="./image/filtr.png" className=' w-[26px] h-[18px] mt-[30px] ml-[-30px]' alt="" />
+                    </div>
                 </div>
-                <div className='flex'>
-                    <h1 className={classSelect}>All chests</h1>
-                    <img src="./image/filtr.png" className=' w-[26px] h-[18px] mt-11 ml-[-30px]' alt="" />
-                </div>
-                <div className=' mt-[16px]'>
+                <div className='scrol-y overflow-auto lg:block lg:ml-0 lg:mt-[0px]  lg:w-[440px] md:w-[992px] grid md:gap-[420px] gap-[296px] grid-cols-4   caret-inherit w-[276px]'>
                     {chests === false ?
-                        totals.map(el => <div key={el.id} className=' ml-5 mt-[20px] relative'>
-                            <img src={el.bg_img} className=' w-[400px] h-[410px] relative' alt="" />
-                            <img src={el.bg1_img} className=' w-[388px] h-[398px] absolute top-[6px] left-[6px]' alt="" />
+                        totals.map(el => 
+                        <div key={el.id} className='md:mr-0 md:ml-5 md:mt-[20px] relative md:w-[400px] w-[276px] '>
+                            <img src={el.bg_img} className=' md:w-[400px] md:h-[410px] relative w-[276px] h-[322px]' alt="" />
+                            <img src={el.bg1_img} className=' md:w-[388px] md:h-[398px] absolute top-[6px] left-[6px] w-[574px[ h-[320px]' alt="" />
                             <h1 className={classElementName}>{el.name}</h1>
                             <div className={classP}>
                                 <p className=' ml-[35px] text-[#94CEF1]'>{el.n1}</p>
                                 <p className=' ml-[30px]'>$<span className=' text-[#F6E835]'>{el.n2}</span></p>
                             </div>
                             <img src={el.logo} alt="" className=' absolute top-[12px] left-[12px]' />
-                            <span className=' absolute w-[30px] block top-[3px] left-[355px] text-[28px] text-white'>
+                            <span className=' absolute w-[30px] block top-[3px] left-[355px] text-[28px] text-white '>
                                 <i className="fa-sharp fa-solid fa-share"></i>
                                 <i className="fa-solid fa-star " onClick={(el) => Save(el.target)} id='0'></i>
                                 <i className="fa-solid fa-clone"></i>

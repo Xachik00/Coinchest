@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { TotalCard } from '../components/TotalCard';
-import Step1 from '../components/Step1';
+import Stepmek from '../components/Stepmek';
 import Scrolls from '../components/Scrolls';
 import Security from '../components/Security';
 import Roadmap from '../components/Roadmap';
@@ -10,72 +10,90 @@ import Stepereq from '../components/Stepereq';
 
 export function HomePage() {
 
-    const [btnclick, setBtnclick] = useState(false);
-    const [btnclick1, setBtnclick1] = useState(false);
+    const [btnclick1, setBtnclick1] = useState(true);
+    const [btnclick2, setBtnclick2] = useState(false);
+    const [btnclick3, setBtnclick3] = useState(false);
 
-    let btn = 'w-[164px] h-[53px] border-[1px] border-solid border-black text-[24px] text-center cursor-pointer bg-[#7A6DE6] stepp rounded-tl-[20px] z-10 '
-    let btn1 = 'w-[164px] h-[53px] border-[1px] border-solid border-black text-[24px] text-center cursor-pointer bg-gray-400 ml-[-40px] stepp1 '
-    let btn11 = 'w-[164px] h-[53px] border-[1px] border-solid border-black text-[24px] text-center cursor-pointer bg-[#7A6DE6]  ml-[-40px] stepp1 '
-    let btn2 = 'w-[164px] h-[53px] border-[1px] border-solid border-black text-[24px] text-center cursor-pointer bg-gray-400 ml-[-40px] stepp2 rounded-tr-[20px]  '
-    let btn22 = 'w-[164px] h-[53px] border-[1px] border-solid border-black text-[24px] text-center cursor-pointer bg-[#7A6DE6] ml-[-40px] stepp2 rounded-tr-[20px]  '
-    let classHi = ' text-[#F4BF4E] text-[48px] w-[380px]  h-[110px] ml-[335px] mt-[36px] text-center ';
+
+    let btn = 'w-[117px] h-[36px] md:w-[164px] md:h-[53px] border-[1px] border-solid border-black md:text-[24px] text-[16px] text-center cursor-pointer bg-[#7A6DE6] stepp rounded-tl-[20px] z-10 '
+    let btn1 = 'w-[117px] h-[36px] md:w-[164px] md:h-[53px] border-[1px] border-solid border-black md:text-[24px] text-[16px] text-center cursor-pointer bg-gray-400 md:ml-[-40px] ml-[-27px] stepp1 '
+    let btn11 = 'w-[117px] h-[36px] md:w-[164px] md:h-[53px] border-[1px] border-solid border-black md:text-[24px] text-[16px] text-center cursor-pointer bg-[#7A6DE6]  md:ml-[-40px] ml-[-27px] stepp1 '
+    let btn2 = 'w-[117px] h-[36px] md:w-[164px] md:h-[53px] border-[1px] border-solid border-black md:text-[24px] text-[16px] text-center cursor-pointer bg-gray-400 md:ml-[-40px] ml-[-27px] stepp2 rounded-tr-[20px]  '
+    let btn22 = 'w-[117px] h-[36px] md:w-[164px] md:h-[53px] border-[1px] border-solid border-black md:text-[24px] text-[16px] text-center cursor-pointer bg-[#7A6DE6] md:ml-[-40px] ml-[-27px] stepp2 rounded-tr-[20px]  '
+    let classHi = ' text-[#F4BF4E] md:text-[48px] text-[24px] md:w-[380px] w-[246px]  h-[110px] md:ml-[335px] mt-[36px] text-center ';
     let classVector = 'text-[28px] text-white font-bold absolute left-[20px] top-[6px]';
-    let classContStep = ' flex ml-[20px] mt-[30px] text-white bg-black w-[409px] rounded-t-[50px]';
+    let classContStep = ' flex ml-[20px] mt-[30px] text-white bg-black md:w-[409px] rounded-t-[50px] w-[288px]';
 
+    function Step1() {
+        setBtnclick1(true)
+        setBtnclick2(false)
+        setBtnclick3(false)        
+    }
     function Step2() {
-        setBtnclick1(!btnclick1)
-        setBtnclick(true)
+        setBtnclick1(false)
+        setBtnclick2(true)
+        setBtnclick3(false)
+    }
+    function Step3() {
+        setBtnclick1(false)
+        setBtnclick2(false)
+        setBtnclick3(true)
     }
 
     return (
-        <div className=' w-[1440px] flex'>
-            <div className=' w-[920px]'>
+        <div className=' lg:w-[1440px] flex md:w-[1024px] w-[320px] '>
+            <div className='lg:w-[920px] md:w-[1024px] mx-auto w-[320px]'>
                 <div className={classHi}>
                     {
-                        btnclick1 ?
-                            <h1>Pay as
-                                <span className=' text-[#7A6DE6]'> You want </span>
-                            </h1> :
-                            btnclick ?
-                                <h1>Present <br />
-                                    <span className=' text-[#7A6DE6]'> a unique gift! </span>
-                                </h1>
-                                :
-                                <h1>Hi, Let’s create <br />
-                                    <span className=' text-[#7A6DE6]'> Your first chest </span>
-                                </h1>
+                        btnclick1 &&
+                        <h1>Hi, Let’s create <br />
+                            <span className=' text-[#7A6DE6]'> Your first chest </span>
+                        </h1>
                     }
+                    {btnclick2 &&
+                        <h1>Present <br />
+                            <span className=' text-[#7A6DE6]'> a unique gift! </span>
+                        </h1>
+                    }{
+                        btnclick3 &&
+                        <h1>Pay as
+                            <span className=' text-[#7A6DE6]'> You want </span>
+                        </h1>
+                    }
+
+
                 </div>
                 <div className=' mt-[51px] relative'>
                     <img src="./image/Vector.png" alt="" />
                     <h2 className={classVector}>Create a chest</h2>
                 </div>
                 <div className={classContStep}>
-                    <div className={btn}><button className='mt-2 mr-8 '>1. Step</button></div>
-                    <div className={btnclick ? btn11 : btn1} onClick={() => setBtnclick(!btnclick)}><button className='mt-2 mr-8'>2. Step</button></div>
-                    <div className={btnclick ? btnclick1 ? btn22 : btn2 : btn2} onClick={Step2}><button className='mt-2 mr-8'>3. Step</button></div>
-                </div>
+                    <div className={btn} onClick={Step1}><button className='md:mt-2 md:mr-8 '>1. Step</button></div>
+                    <div className={btnclick2 || btnclick3 ? btn11 : btn1} onClick={Step2}><button className='mt-2 mr-8'>2. Step</button></div>
+                    <div className={btnclick3 ? btn22 : btn2 } onClick={Step3}><button className='mt-2 mr-8'>3. Step</button></div>               </div>
                 {
-                    btnclick1 ?
-                        <div>
-                            <Stepereq />
-                            <Security />
-                        </div>
-                        :
-                        btnclick ?
-                            <div>
-                                <Steperku />
-                                <Security />
-                            </div>
-                            : <div>
-                                <Step1 btnclick={btnclick} setBtnclick={setBtnclick} />
-                                <Scrolls />
-                                <Security />
-                                <Roadmap />
-                            </div>
+                    btnclick1 &&
+                    <div>
+                        <Stepmek Step2={Step2} />
+                        <Scrolls />
+                        <Security />
+                        <Roadmap />
+                    </div>
+                }{btnclick2 &&
+                    <div>
+                        <Steperku Step1={Step1} />
+                        <Security />
+                    </div>
+                }{btnclick3 &&
+
+                    <div>
+                        <Stepereq />
+                        <Security />
+                    </div>
+
                 }
             </div>
-            <div className=' w-[500px] ml-[60px] mt-[36px]'>
+            <div className=' lg:w-[500px] lg:ml-[60px] lg:mt-[36px] md:w-[992px] md:mt-[1200px] md:ml-[-1004px] ml-[-288px] mt-[1200px]'>
                 <TotalCard />
             </div>
         </div>);
