@@ -29,12 +29,12 @@ export function ProductSearch() {
   }, [debounced]);
 
 
-  let classInput = 'w-[264px] h-[36px] md:h-[49px] md:w-[222px] rounded-[8px] border-[1px] border-solid border-black text-black ml-[14px] text-[24px] p-2 pl-10';
+  let classInput = 'max-w-[264px] h-[36px] md:h-[49px] md:w-[222px] rounded-[8px] border-[1px] border-solid border-black text-black ml-[-25px] mt-2 md:mt-0  md:ml-[14px] text-[24px] p-2 pl-10';
 
 
   return (
     <div className='relative mb-4'>
-      <i className="fa-solid fa-magnifying-glass text-[#F6E835] absolute text-[22px] top-3 left-6 stroke"></i>
+      <i className="fa-solid fa-magnifying-glass text-[#F6E835] md:absolute relative text-[22px]  md:top-3 md:left-6 stroke"></i>
       <input  className={classInput}  placeholder="Search" max={7} {...input}/>
       {
         dropdown &&

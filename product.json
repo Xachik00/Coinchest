@@ -28,13 +28,7 @@
       "price": "100",
       "price_btc": "0.0001BTC"
     },
-    {
-      "id": 5,
-      "title":"box5",
-      "sunduk_img": "./image/snduk5.png",
-      "price": "250",
-      "price_btc": "0.0001BTC"
-    },
+    
     {
       "id": 6,
       "title":"box6",

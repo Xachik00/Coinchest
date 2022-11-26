@@ -7,13 +7,12 @@ import { AboutPage } from "./pages/AboutPage";
 
 const App = () => {
   return (
-   <div className="container mx-auto w-[100%]  ">
+   <div className=" mx-auto max-w-[1440px]  ">
     <Header />
      <Routes>
           <Route path={'/'} element={<HomePage/>}/>
           <Route path={'/about'} element={<AboutPage/>}/>
       </Routes>
-    <Footer/>
     
    </div>
   )
